@@ -56,6 +56,23 @@ body{
 
 }
 
+#CopyBtn{
+    
+    padding-top: 12px;
+    padding-bottom: 14px;
+    padding-right: 19px;
+    padding-left: 19px;
+
+    font-weight: bold;
+    font-family:'Times New Roman', Times, serif;
+
+    font-size: 50px;
+    background-color: beige;
+
+    cursor: pointer;
+    
+}
+
 #myButton1:hover, #myButton2:hover {
     background-color: #3e8e41;
     color: rgb(160, 228, 32);

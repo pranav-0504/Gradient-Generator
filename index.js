@@ -20,32 +20,50 @@ const HexValues = () =>{
     return colors;      // yeh he chaiye final output!
 };
 
+let rgb1 = "#ffff";
+let rgb2 = "#0000";
 
 let copyDiv = document.querySelector(".copyCode");  // yeh div hai jo hex code ko copy karega
 
 const handleButton1 = () =>{
     
-    let rgb1 =  HexValues();             // yeh function call kiya hai jo hex code generate karega;
+    rgb1 =  HexValues();             // yeh function call kiya hai jo hex code generate karega;
     console.log(rgb1);                  // yeh function call kiya hai jo hex code generate karega;
 
-    document.body.style.backgroundImage = `linear-gradient(to left, ${rgb1} , #444)`; 
+    document.body.style.backgroundImage = `linear-gradient(to left, ${rgb1} , ${rgb2})`; 
     btn1.textContent = rgb1;         // yeh button ka text change karega jo hex code generate hua hai usse;
     
-    copyDiv.innerHTML = `background-image: linear-gradient(to right, ${rgb1}, #444)`;
+    copyDiv.innerHTML = `background-image: linear-gradient(to right, ${rgb1}, ${rgb2})`;
 
 };
 
 const handleButton2 = () => {
-    let rgb2 = HexValues();             // yeh function call kiya hai jo hex code generate karega;
+    
+    rgb2 = HexValues();             // yeh function call kiya hai jo hex code generate karega;
     console.log(rgb2);                  // yeh function call kiya hai jo hex code generate karega;
     
-    document.body.style.backgroundImage = `linear-gradient(to right, ${rgb2} , #444)`;
+    document.body.style.backgroundImage = `linear-gradient(to right, ${rgb1}, ${rgb2})`;
     btn2.textContent = rgb2;         // yeh button ka text change karega jo hex code generate hua hai usse;
 
-    copyDiv.innerHTML = `background-image: linear-gradient(to left, ${rgb2}, #444)`;
+    copyDiv.innerHTML = `background-image: linear-gradient(to left, ${rgb1}, ${rgb2})`;
 
 };
 
 // Function calls:
 btn1.addEventListener("click", handleButton1); 
 btn2.addEventListener("click", handleButton2);
+
+
+// For Copying:
+let copybtn = document.getElementById("CopyBtn");  
+copybtn.addEventListener("click", () => {
+    navigator.clipboard.writeText(copyDiv.innerText);
+    alert("Copied to clipboard!");
+});
+
+
+
+
+
+
+
