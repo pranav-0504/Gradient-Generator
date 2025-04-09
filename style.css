@@ -53,24 +53,28 @@ body{
     text-decoration:solid;
     text-align: center;
 
-
 }
 
 #CopyBtn{
-    
     padding-top: 12px;
     padding-bottom: 14px;
     padding-right: 19px;
     padding-left: 19px;
-
     font-weight: bold;
     font-family:'Times New Roman', Times, serif;
-
     font-size: 50px;
     background-color: beige;
-
     cursor: pointer;
+    border-radius: 10px;
     
+}
+
+#CopyBtn:hover {
+    background-color: #3e8e41;
+    color: rgb(160, 228, 32);
+    transition: 0.2s;
+    font-size: 40px;
+    font-weight: bold;
 }
 
 #myButton1:hover, #myButton2:hover {
@@ -85,15 +89,5 @@ body{
     font-size: 40px;
 }
 
-/* .Buttons{
 
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 90vh;
-
-    
-
-} */
 
