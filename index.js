@@ -20,8 +20,8 @@ const HexValues = () =>{
     return colors;      // yeh he chaiye final output!
 };
 
-let copyDiv = document.querySelector(".copyCode");  // yeh div hai jo hex code ko copy karega
 
+let copyDiv = document.querySelector(".copyCode");  // yeh div hai jo hex code ko copy karega
 
 const handleButton1 = () =>{
     
@@ -45,9 +45,6 @@ const handleButton2 = () => {
     copyDiv.innerHTML = `background-image: linear-gradient(to left, ${rgb2}, #444)`;
 
 };
-
-
-
 
 // Function calls:
 btn1.addEventListener("click", handleButton1); 
